@@ -1,3 +1,4 @@
+'use client'
 const Gg = () => {
     return (
         <>Google</>
