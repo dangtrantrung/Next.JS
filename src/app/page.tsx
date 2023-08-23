@@ -8,8 +8,10 @@ export default function Home() {
     <div>
       <ul>
         <li className={x['red']}>
-          {/* <Link href={"/facebook"}>Facebook</Link> */}
-          <a href="/facebook"> facebook</a>
+          <Link href={"/facebook"}>Facebook</Link></li>
+        <li className={x['red']}>
+
+          <a className={y['red']} href="/facebook"> facebook</a>
         </li>
         <li className={y['green']}>
           <a href="/google"> Google</a>
