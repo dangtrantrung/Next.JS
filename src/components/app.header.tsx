@@ -9,11 +9,11 @@ const AppHeader = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
-                <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="/"> Next.JS React-Bootstrap</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/"> Home Page</Nav.Link>
                         <Nav.Link href="/facebook" className='nav-link'>Facebook</Nav.Link>
                         <Nav.Link href="/google" className='nav-link'>Google</Nav.Link>
 
