@@ -27,22 +27,27 @@ export default function Home() {
     revalidateOnFocus: false,
     revalidateOnReconnect: false
   })
-  if (data) console.log('>>>check response data', data)
-  if (error) { }
-  return (
-    <div>
-      <div> {data?.length}</div>
-      <ul>
-        <li className={x['red']}>
-          <Link href={"/facebook"}>Facebook</Link></li>
-        <li className={x['red']}>
+  if (error) { return (<div>...Load Data Failed</div>) }
+  if (!data) {
+    console.log('>>>check response data', data)
+    return (<div>...Loading</div>)
+  }
+  else {
+    return (
+      <div>
+        <div> {data?.length}</div>
+        <ul>
+          <li className={x['red']}>
+            <Link href={"/facebook"}>Facebook</Link></li>
+          <li className={x['red']}>
 
-          <a className={y['red']} href="/facebook"> facebook</a>
-        </li>
-        <li className={y['green']}>
-          <a href="/google"> Google</a>
-        </li>
-      </ul>
-      <AppTable />
-    </div>)
+            <a className={y['red']} href="/facebook"> facebook</a>
+          </li>
+          <li className={y['green']}>
+            <a href="/google"> Google</a>
+          </li>
+        </ul>
+        <AppTable blogs={data} />
+      </div>)
+  }
 }
